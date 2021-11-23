@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+message Product {
+    int32 id = 1;
+    string name = 2;
+    string thumbnail = 3;
+    float price = 4;
+    string ingredients = 5;
+    float avaliability = 6;
+    int32 volume = 7;
+}
+
+message GetProductByIdRequest {
+    int32 id = 1;
+}
+
+message GetProductByIdResponse {
+    Product product = 1;
+}
+
+message GetAllProductsRequest {}
+
+message GetAllProductsResponse {
+    repeated Product products = 1;
+}
+
+message CreateProductRequest {
+    Product product = 1;
+}
+
+message CreateProductResponse {
+    Product product = 1;
+}
+
+message DeleteProductRequest {
+    int32 id = 1;
+}
+
+message DeleteProductResponse {}
+
+message UpdateProductRequest {
+    Product product = 1;
+}
+
+message UpdateProductResponse {
+    Product product = 1;
+}
+
+message CloneProductRequest {
+    int32 id = 1;
+}
+
+message CloneProductResponse {
+    Product product = 1;
+}
+
+service ProductService {
+    rpc GetProductById(GetProductByIdRequest) returns (GetProductByIdResponse);
+    rpc GetAllProducts(GetAllProductsRequest) returns (GetAllProductsResponse);
+    rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse);
+    rpc DeleteProduct(DeleteProductRequest) returns (DeleteProductResponse);
+    rpc UpdateProduct(UpdateProductRequest) returns (UpdateProductResponse);
+    rpc CloneProduct(CloneProductRequest) returns (CloneProductResponse);
+}

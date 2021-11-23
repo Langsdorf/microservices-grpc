@@ -1,0 +1,247 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #20012b;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 90vw;
+  height: 90vh;
+}
+
+.drugstores {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.drugstore {
+  margin: 0.5rem;
+  margin-left: 5rem;
+  border-radius: 2rem;
+  background-color: #520066;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.drugstore h1 {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.drugstoreInfo {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.drugstore img {
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  align-self: center;
+}
+
+.drugstoreFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.drugstore button {
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.drugstore button:first-child {
+  background-color: #66001b;
+}
+
+.drugstore button:last-child {
+  background-color: #8c7b00;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.product {
+  margin: 0.5rem;
+  margin-left: 5rem;
+  border-radius: 2rem;
+  background-color: #520066;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.product h1 {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.productInfo {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product img {
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  align-self: center;
+}
+
+.product Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.product button {
+  margin: 0.2rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.product button:first-child {
+  background-color: #66001b;
+}
+
+.product button:nth-child(2) {
+  background-color: #8c7b00;
+}
+
+.product button:last-child {
+  background-color: #00778c;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #280044;
+  margin: 10% auto auto auto;
+  padding: 20px;
+  border: none;
+  border-radius: 2rem;
+  width: 80%;
+}
+
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.edit input {
+  width: 40%;
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.edit label {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.edit button {
+  margin: 0.5rem;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #008c33;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container button {
+  margin-left: 1rem;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #008c33;
+}

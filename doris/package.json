@@ -1,0 +1,23 @@
+{
+  "name": "doris",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.6.7",
+    "grpc": "^1.24.11",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.41"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.9"
+  }
+}

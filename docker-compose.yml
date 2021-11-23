@@ -1,0 +1,60 @@
+version: '3.1'
+
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    command: --init-file /var/lib/mysql/init.sql
+    volumes:
+      - .docker/db:/var/lib/mysql
+      - ./init.sql:/var/lib/mysql/init.sql
+  doris:
+    volumes:
+      - ./doris:/usr/src/app
+    build:
+      context: ./doris/
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "50051:50051"
+  draconis:
+    volumes:
+      - ./draconis:/usr/src/app
+    build:
+      context: ./draconis/
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "50052:50052"
+  api:
+    volumes:
+      - ./api:/usr/src/app
+    build:
+      context: ./api/
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    depends_on:
+      - doris
+      - draconis
+  frontend:
+    volumes:
+      - ./next-frontend:/usr/src/app
+    build:
+      context: ./next-frontend/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
